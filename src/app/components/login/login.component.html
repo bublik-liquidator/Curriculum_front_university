@@ -1,0 +1,33 @@
+<div class="background"></div>
+<div class="container">
+  <img class="image" src="assets/images/owl.jpg" />
+  <div class="content">
+    <img class="logo" src="assets/images/img2.png" />
+    <div class="instruction">Введите логин и пароль</div>
+    <div class="error-container">
+      <div class="form-errors">{{ formErrors }}</div>
+    </div>
+    <div class="label-phone">ЛОГИН</div>
+    <div class="title">Зайти в Admin Panel</div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <input
+        type="text"
+        class="input-field-phone"
+        formControlName="login"
+        placeholder="Введите ваш логин"
+      />
+      <div class="label-password">ПАРОЛЬ</div>
+      <input
+        type="password"
+        class="input-field-password"
+        formControlName="password"
+        placeholder="Введите ваш пароль"
+      />
+      <div>
+        <button class="login-button" type="submit">Вход</button>
+      </div>
+    </form>
+    <!-- <div class="signup-text">У Вас нет аккаунта?</div>
+    <a href="#" class="signup-link">Регистарция</a> -->
+  </div>
+</div>

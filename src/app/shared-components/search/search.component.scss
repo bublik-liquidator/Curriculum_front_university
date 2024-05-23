@@ -1,0 +1,21 @@
+.search {
+  border-radius: 50px;
+  background-color: #fcfeff;
+  display: flex;
+  gap: 10px;
+  padding: 4px 8px;
+  width: 30vw;
+  min-width: 300px;
+}
+
+.search input {
+  color: var(--Colors-gray-400, #94a3b8);
+  align-self: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  font: 400 16px/143% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px 20px 5px 0;
+}

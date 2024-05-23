@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="header">
+    <div class="title">Специальности</div>
+    <button class="create-speciality-button" (click)="createSpeciality()">
+      Создать специальность
+    </button>
+  </div>
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [data]="tableData"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+    ></tablec>
+    }
+  </div>
+</div>

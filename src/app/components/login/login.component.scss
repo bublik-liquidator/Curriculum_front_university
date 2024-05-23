@@ -1,0 +1,189 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  width: 750px;
+  height: 580px;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  border-radius: 30px;
+  left: 40px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.image {
+  margin-right: 20px;
+  width: 400px;
+  height: 581px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.content {
+  width: 316px;
+  height: 500px;
+}
+
+.logo {
+  width: 100px;
+  height: 98.1px;
+  margin-left: 108px;
+  top: 20px;
+  position: absolute;
+}
+
+.instruction {
+  margin-left: 55px;
+  top: 169px;
+  position: absolute;
+  color: #9fa2b4;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  font-family: "Inter";
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 192px;
+  width: 45%;
+}
+
+.form-errors {
+  text-align: center;
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+.label-phone {
+  margin-left: 0px;
+  top: 236px;
+  position: absolute;
+  color: #101010;
+  font-size: 14px;
+  font-weight: 600;
+  word-wrap: break-word;
+  font-family: Inter;
+  font-weight: bold;
+}
+
+.title {
+  margin-left: 33px;
+  top: 127px;
+  position: absolute;
+  color: #252733;
+  font-size: 24px;
+  font-weight: 600;
+  word-wrap: break-word;
+  font-family: "Inter";
+}
+
+.input-field-phone {
+  width: 306px;
+  height: 42px;
+  margin-top: 10px;
+  position: absolute;
+  background: #fcfdfe;
+  border-radius: 8px;
+  border: 1px #101010 solid;
+  font-family: "Inter";
+  padding-left: 10px;
+  margin-top: 220px;
+}
+
+.label-password {
+  margin-left: 0px;
+  top: 324px;
+  position: absolute;
+  color: #101010;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Inter";
+}
+
+.input-field-password {
+  width: 306px;
+  height: 42px;
+  margin-top: 10px;
+  position: absolute;
+  background: #fcfdfe;
+  border-radius: 8px;
+  border: 1px #101010 solid;
+  font-family: "Inter";
+  padding-left: 10px;
+  margin-top: 308px;
+}
+
+.login-button {
+  width: 303px;
+  height: 48px;
+  background-color: #000000;
+  border-radius: 15px;
+  top: 427px;
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-family: "Inter";
+  transition: transform 0.2s;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 103px;
+  top: 24px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 2px white solid;
+  background-color: #ffffff;
+  font-family: "Inter";
+}
+
+.signup-text {
+  margin-left: 5px;
+  top: 493px;
+  position: absolute;
+  color: #9fa2b4;
+  font-size: 16px;
+  font-weight: 400;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: "Inter";
+}
+
+.signup-link {
+  margin-left: 212px;
+  top: 493px;
+  position: absolute;
+  color: #101010;
+  font-size: 16px;
+  font-weight: 400;
+  word-wrap: break-word;
+  text-decoration: none;
+  font-family: "Inter";
+  transition: transform 0.3s;
+}
+
+.signup-link:hover {
+  transform: scale(1.05);
+}

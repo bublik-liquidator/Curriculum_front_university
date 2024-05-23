@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="header">
+    <div class="title">Форма обучения</div>
+    <button class="create-education-button" (click)="createEducation()">
+      Создать форму обучения
+    </button>
+  </div>
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [data]="tableData"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+    ></tablec>
+    }
+  </div>
+</div>

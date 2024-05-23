@@ -1,0 +1,24 @@
+<div class="main-container">
+  <div class="title">Пользователи</div>
+  <br />
+  <div class="search-and-button">
+    <div class="search-bar">
+      <search (searchEvent)="onPageChange(1, $event)"></search>
+    </div>
+    <button class="create-user-button" (click)="createUser()">
+      Создать пользователя
+    </button>
+  </div>
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [pageIndex]="pageIndex"
+      [data]="tableData"
+      [totalCount]="totalCount"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+      (pageChange)="onPageChange($event, currentSearchQuery)"
+    ></tablec>
+    }
+  </div>
+</div>

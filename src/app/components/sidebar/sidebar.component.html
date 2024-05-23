@@ -1,0 +1,29 @@
+<div class="menu">
+  <div class="menu-item" (click)="toggleMenu()">
+    <span class="menu-item-content">
+      <img loading="lazy" src="assets/images/menu.svg" class="menu-icon" />
+      <div class="menu-text">Ресурсы</div>
+    </span>
+    <img
+      loading="lazy"
+      [src]="'assets/images/menu_arrow_down.svg'"
+      [style.transform]="isMenuOpen ? 'rotate(180deg)' : 'rotate(0)'"
+      class="menu-arrow"
+    />
+  </div>
+  @if(isMenuOpen){
+  <div class="menu-subitems">
+    @for(item of menuItems; track item) { @if(isAdmin || item.en ===
+    'Curriculas'){
+    <div
+      class="menu-subitem"
+      [class.active]="activeElement === item.en"
+      (click)="activeElement = item.en"
+      routerLink="/account/{{ item.en }}"
+    >
+      {{ item.ru }}
+    </div>
+    } }
+  </div>
+  }
+</div>

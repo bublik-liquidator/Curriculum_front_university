@@ -1,0 +1,198 @@
+.row-container {
+  background-color: var(--Colors-gray-50, #f8fafc);
+  height: 55px;
+}
+
+$font-weight: 800;
+$font-style: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+
+.fields {
+  color: var(--Colors-gray-500, #64748b);
+  font: $font-weight 16px/167% Inter, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  height: 35px;
+}
+
+.two-factor-label {
+  color: var(--Colors-gray-500, #64748b);
+  font: $font-weight 16px/167% Inter, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+.table-row td:not(:last-child) {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.table-row {
+  align-items: center;
+  border-bottom: 2px solid black;
+  background-color: var(--Colors-white, #fff);
+  height: 5px;
+}
+.table-row td:first-child {
+  text-align: center;
+}
+
+input[type='checkbox' i] {
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex-direction: column;
+  position: relative;
+  padding-left: 4px;
+}
+.skeleton-container {
+  height: 20px;
+  overflow: hidden;
+}
+.checkbox-container:checked + .checkbox-label {
+  background-color: var(--Colors-gray-300, #cbd5e1);
+}
+
+.checkbox-container:checked + .checkbox-label::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 9px;
+  border: solid var(--Colors-white, #fff);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.id {
+  color: var(--Colors-primary-500, #0ea5e9) !important;
+  margin: auto 0;
+  font: $font-weight 16px/143% Inter, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  text-align: center;
+}
+
+.tablic {
+  padding-top: 20px;
+  min-height: 800px;
+}
+
+.table-content {
+  color: var(--Colors-gray-500, #64748b);
+  margin: auto 0;
+  font: 400 16px/143% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+table {
+  border-radius: 8px;
+  background: var(--Colors-white, #fff);
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th,
+td {
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #0000001a;
+}
+
+tfoot td:last-child {
+  border-bottom: none;
+}
+
+.actions {
+  text-align: center;
+}
+
+.delete-button {
+  margin: 0 16px;
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #e90e0eab;
+  align-self: stretch;
+  justify-content: center;
+  padding: 6px 16px;
+  font: $font-weight 16px/143% Inter, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.delete-button:hover {
+  background-color: #e90e0e;
+}
+
+.edit-button {
+  margin: 0 16px;
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #0ea4e9bd;
+  align-self: stretch;
+  justify-content: center;
+  padding: 6px 16px;
+  font: $font-weight 16px/143% Inter, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.edit-button:hover {
+  background-color: #0ea5e9;
+}
+
+table th:last-child,
+table td:last-child {
+  width: 20%;
+}
+
+nz-pagination {
+  border-radius: 50px;
+}
+
+::ng-deep .ant-pagination-item {
+  border-radius: 8px;
+}
+
+::ng-deep.ant-pagination-disabled .ant-pagination-item-link,
+::ng-deep.ant-pagination-disabled:focus-visible .ant-pagination-item-link,
+::ng-deep.ant-pagination-disabled:hover .ant-pagination-item-link,
+::ng-deep.ant-pagination-next .ant-pagination-item-link,
+::ng-deep.ant-pagination-prev .ant-pagination-item-link,
+::ng-deep.ant-pagination-item-link {
+  border-radius: 8px;
+}
+.info {
+  color: var(--Colors-gray-600, #475569);
+  font: 400 16px / 143% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.expiring-soon {
+  background-color: #ff000023;
+}

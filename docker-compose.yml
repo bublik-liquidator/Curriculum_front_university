@@ -1,0 +1,6 @@
+services:
+  curriculum_front:
+    container_name: curriculum_front
+    build: .
+    ports:
+      - '4200:4200'

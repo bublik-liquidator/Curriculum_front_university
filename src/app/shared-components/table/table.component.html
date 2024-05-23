@@ -1,0 +1,81 @@
+<div class="tablic">
+  @if(data.length > 0){
+  <table>
+    <thead>
+      <tr class="row-container">
+        <th></th>
+        @if (dataLoaded) { @for(field of fields; track field){
+        <th class="fields">{{ field }}</th>
+        }
+        <th class="fields">Действия</th>
+        } @else {
+        <th colspan="100%">
+          <div class="skeleton-container">
+            <nz-skeleton
+              [nzActive]="true"
+              [nzParagraph]="{ rows: 1 }"
+            ></nz-skeleton>
+          </div>
+        </th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @if (dataLoaded) { @for( item of data; track item['id']){
+      <tr
+        class="table-row"
+        [ngClass]="{
+          'expiring-soon': item['Срок действия']
+            ? isExpiringSoon(item['Срок действия'])
+            : false
+        }"
+      >
+        <td>
+          <label>
+            <input type="checkbox" [value]="item['id']" />
+          </label>
+        </td>
+        @for(field of fields; track field) {
+        <td
+          [ngClass]="{
+            'table-content': true,
+          }"
+        >
+          @if (field && item[field]?.display ) {
+          <a (click)="item[field].download()">{{ item[field].display }}</a>
+          } @else {
+          {{ item[field] }}
+          }
+        </td>
+        }
+        <td class="actions">
+          <button class="delete-button" (click)="onDelete(item['id'])">
+            <fa-icon [icon]="faTrashAlt"></fa-icon>
+          </button>
+          <button class="edit-button" (click)="onEdit(item['id'])">
+            <fa-icon [icon]="faEdit"></fa-icon>
+          </button>
+        </td>
+      </tr>
+      } }@else {
+      <tr class="table-row">
+        <td colspan="100%">
+          <nz-skeleton
+            [nzActive]="true"
+            [nzParagraph]="{ rows: 1 }"
+          ></nz-skeleton>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <br />
+  <nz-pagination
+    [nzPageIndex]="pageIndex"
+    [nzTotal]="totalCount"
+    (nzPageIndexChange)="pageChange.emit($event)"
+  ></nz-pagination>
+  }@else{
+  <div class="info"><p>Нет данных</p></div>
+  }
+</div>

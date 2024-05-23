@@ -1,0 +1,65 @@
+<div class="background1">
+  <form [formGroup]="form" (ngSubmit)="Save()" class="background">
+    {{ validFormInfo }}
+
+    @for( field of inputData.fields; track field){
+    <div class="field-group">
+      @if(field.type === 'info'){
+      <div class="info">{{ field.value }}</div>
+      } @else{@if(field.type === 'button'){
+      <button
+        [class]="field.field"
+        [type]="field.type"
+        (click)="field.click ? field.click?.() : null"
+      >
+        {{ field.value }}
+      </button>
+      } @else{
+      <label>{{ field.fieldName }}</label>
+      @if(field.type === 'checkbox'){
+      <div
+        class="checkbox-container"
+        [style.max-height.px]="field.value.length > 12 ? '100' : null"
+        [style.overflow-y]="field.value.length > 12 ? 'scroll' : 'auto'"
+      >
+        @for(specialty of field.value; track specialty){
+        <div>
+          <label nz-checkbox [formControlName]="specialty.name">
+            {{ specialty.name }}
+          </label>
+        </div>
+        }
+      </div>
+      } @else if(field.type === 'select'){
+      <nz-select [formControlName]="field.field">
+        @for(option of field.options; track option){
+        <nz-option
+          [nzLabel]="option.value"
+          [nzValue]="option.value"
+        ></nz-option>
+
+        }
+      </nz-select>
+      } @else{
+      <input
+        nz-input
+        [formControlName]="field.field"
+        [type]="field.type"
+        [value]="field.value"
+      />
+      } } }
+    </div>
+    }
+    <div class="button-group">
+      @for( button of inputData.buttons; track button){
+      <button
+        [class]="button.field"
+        [type]="button.type"
+        (click)="button.click ? button.click?.() : null"
+      >
+        {{ button.value }}
+      </button>
+      }
+    </div>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="header">
+    <div class="title">Статусы</div>
+    <button class="create-status-button" (click)="createStatus()">
+      Создать статус
+    </button>
+  </div>
+
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [data]="tableData"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+    ></tablec>
+    }
+  </div>
+</div>

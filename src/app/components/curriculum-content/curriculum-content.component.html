@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="title">Учебные программы</div>
+  <br />
+  <div class="search-and-button">
+    <div class="search-bar">
+      <search (searchEvent)="onPageChange(1, $event)"></search>
+    </div>
+    <button class="create-curriculum-button" (click)="createCurriculum()">
+      Создать учебную программу
+    </button>
+  </div>
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [pageIndex]="pageIndex"
+      [data]="tableData"
+      [totalCount]="totalCount"
+      (downloadCallback)="downloadFile($event)"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+      (pageChange)="onPageChange($event, currentSearchQuery)"
+    ></tablec>
+    }
+  </div>
+</div>

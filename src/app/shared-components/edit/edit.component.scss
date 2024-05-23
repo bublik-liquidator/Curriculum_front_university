@@ -1,0 +1,165 @@
+$font-inter: 400 16px / 143% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+$font-inter-800: 800 16px / 143% Inter, -apple-system, Roboto, Helvetica,
+  sans-serif;
+
+.background1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+.field-group {
+  display: flex;
+  margin-bottom: 4px;
+  justify-content: space-between;
+  flex-direction: column !important;
+}
+label {
+  color: var(--Colors-gray-500, #64748b);
+  font: $font-inter;
+}
+
+label + nz-select {
+  margin-top: 2px;
+}
+
+input {
+  display: block;
+  height: 33px;
+  padding: 1px 10px;
+  color: var(--Colors-gray-600, #475569);
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  margin-top: 2px;
+  font: $font-inter;
+}
+nz-select {
+  font: $font-inter;
+  color: var(--Colors-gray-600, #475569);
+}
+::ng-deep .ant-select-item-option-content {
+  font: 400 15px / 143% Inter, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-button {
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #0ea4e9bd;
+  align-self: stretch;
+  justify-content: center;
+  padding: 5px 15px;
+  font: $font-inter-800;
+  border: none;
+  cursor: pointer;
+}
+input[type="submit"] {
+  color: var(--Colors-white, #fff);
+  border-radius: 4px;
+  height: 27px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #0ea4e9bd;
+  padding: 5px 15px;
+  font: $font-inter-800;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #e90e0eab;
+  align-self: stretch;
+  justify-content: center;
+  padding: 5px 15px;
+  font: $font-inter-800;
+  border: none;
+  cursor: pointer;
+}
+
+.filePath {
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #0ea4e9bd;
+  align-self: stretch;
+  padding: 5px 15px;
+  font: $font-inter-800;
+  border: none;
+  cursor: pointer;
+}
+
+.flex-row {
+  flex-direction: row !important;
+  color: var(--Colors-white, #fff);
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  background-color: #0ea4e9bd;
+  align-self: stretch;
+  padding: 5px 15px;
+  font: $font-inter-800;
+  border: none;
+  cursor: pointer;
+}
+.info {
+  color: var(--Colors-gray-600, #475569);
+  font: $font-inter;
+  margin-top: 10px;
+}
+
+::ng-deep .ant-message-notice-content {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff;
+  pointer-events: all;
+  border-radius: 10px;
+  font: $font-inter;
+}
+
+@media (max-height: 740px) {
+  .checkbox-container {
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+}
+::ng-deep.ant-select-dropdown {
+  border-radius: 5px;
+  padding: 0px 0;
+}
+
+::ng-deep.ant-select-focused:not(.ant-select-disabled).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector,
+::ng-deep.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 5px;
+}
