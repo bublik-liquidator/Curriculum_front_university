@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="title">Архив учебные программы</div>
+  <br />
+  <div class="search-and-button">
+    <div class="search-bar">
+      <search (searchEvent)="onPageChange(1, $event)"></search>
+    </div>
+  </div>
+  <div class="tablic">
+    @if (tableData) {
+    <tablec
+      [pageIndex]="pageIndex"
+      [data]="tableData"
+      [totalCount]="totalCount"
+      (downloadCallback)="downloadFile($event)"
+      (delete)="onDelete($event)"
+      (edit)="onEdit($event)"
+      (pageChange)="onPageChange($event, currentSearchQuery)"
+    ></tablec>
+    }
+  </div>
+</div>

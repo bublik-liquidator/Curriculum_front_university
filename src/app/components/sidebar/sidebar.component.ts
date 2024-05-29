@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { jwtDecode } from 'jwt-decode';
-import { UserService } from '../../services/user.service';
+
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from '../../services/login.service';
 
@@ -23,6 +22,7 @@ export class SidebarComponent {
     { en: 'Specialties', ru: 'Специальности' },
     { en: 'Educations', ru: 'Форма обучения' },
     { en: 'Statuses', ru: 'Статусы' },
+    { en: 'Archive', ru: 'Архив' },
   ];
   isAdmin: boolean;
 

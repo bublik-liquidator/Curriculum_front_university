@@ -19,6 +19,8 @@ docker-compose up --build
 
 ng build --output-path docs --base-href /Curriculum_front_university/
 
+ng build --output-path docs --base-href /**имя репозитория**/
+
 После сборки перейдите в настройки репозитория -> найдите пункт Pages слева ->
 найдите Branch и выберите в выпадающем окне ветку, на которой находится сборка,
 затем измените папку (по умолчанию указано /root) на /docs -> нажмите Save и

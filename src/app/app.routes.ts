@@ -60,6 +60,14 @@ export const routes: Routes = [
           ),
         canActivate: [AdminGuard],
       },
+      {
+        path: 'Archive',
+        loadComponent: () =>
+          import('./components/archive/archive.component').then(
+            (m) => m.ArchiveComponent
+          ),
+        canActivate: [AdminGuard],
+      },
     ],
   },
 ];
