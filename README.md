@@ -5,10 +5,10 @@
 
 # Запуск локально
 
-Изменить содержимое файла Curriculum\*front*university\src\app\environment.ts
+Изменить содержимое файла Curriculum\front*university\src\app\environment.ts
 строку serverUrl: 'ВАШ*АДРЕС_СЕРВЕРА/api', например 'http://localhost:3000/api',
 
-Далее установите все npm пакеты, в командной строке:
+Далее установите все npm пакеты, в командной строке: npm i
 
 После установки пакетов, в командной строке: ng serve
 
